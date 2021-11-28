@@ -1,0 +1,52 @@
+@import '../../index.scss';
+
+.wrapper {
+  display: flex;
+}
+
+.button {
+  display: inline-block;
+  padding: 30px 20px;
+}
+
+.svg {
+  width: 20px;
+  border-left: 1px solid $c-main-20;
+}
+
+.search path{
+  fill: $c-orange;
+
+  a:hover & {
+    fill: $c-turquoise;
+  }
+}
+
+.heart path {
+  stroke: $c-erorr;
+
+  a:hover & {
+    stroke: $c-turquoise;
+  }
+
+}
+
+a:hover .heart circle {
+  fill:#C5C1B8;
+}
+
+.user path{
+  stroke: $c-blue;
+
+  a:hover & {
+    stroke: $c-turquoise;
+  }
+}
+
+.basket path {
+  fill: $c-grren;
+
+  a:hover & {
+    fill: $c-turquoise;
+  }
+}

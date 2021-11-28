@@ -1,0 +1,14 @@
+@import '../../index.scss';
+
+.link {
+  font-size: $fs-config + px;
+  line-height: $lh-nav + px;
+  font-family: $f-Raleway;
+  letter-spacing: 0.08em;
+  margin: 0 10px;
+  display: flex;
+  
+  & a {
+    padding: 20px 15px;
+  }
+}

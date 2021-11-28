@@ -1,0 +1,105 @@
+// ! EXAMPLE TO INCLUDE
+// @include backgroundContainCenter;
+// font-size: em(18);
+// @include size(30);
+
+@mixin backgroundContainCenter {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@mixin backgroundCoverCenter {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin containerGlobal {
+  max-width: 1250px;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@function em($px) {
+  @return $px / $fs-base + em;
+}
+
+@function px($px) {
+  @return $px + px;
+}
+
+@mixin size($px) {
+  width: $px + px;
+  height: $px + px;
+}
+
+@mixin fixedGlobal {
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  display: flex;
+  z-index: 999;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+@mixin absolutely {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@mixin absolutelyCenter {
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+@mixin absolutelyCenterHT($top) {
+  position: absolute;
+  margin: 0 auto;
+  top: $top;
+  right: 0;
+  left: 0;
+}
+
+@mixin absolutelyCenterHB {
+  position: absolute;
+  margin: 0 auto;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+@mixin absolutelyFull {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+@mixin limitText($lines, $lineHeight) {
+  max-height: $lineHeight * $lines + "px";
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  line-height: $lineHeight;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@mixin gradientText($gradient, $color) {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -ms-background-size: 10px;
+  background: $gradient;
+  -ms-background: none;
+  color: $color;
+}

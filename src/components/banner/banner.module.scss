@@ -1,0 +1,56 @@
+@import '../../index.scss';
+
+.banner {
+  background-image: url(../../assets/images/banner2.png);
+  background-position: center 50%;
+  background-repeat: no-repeat;
+  background-color: $c-bg1;
+  background-size: cover;
+  margin-top: 145px;
+  min-height: 650px;
+  display: flex
+}
+
+.wrapper {
+  @include containerGlobal;
+  align-items: center;
+  display: flex;
+}
+
+.info {
+  max-width: 400px;
+}
+
+.title {
+  text-transform: uppercase;
+  font-family: $f-Raleway;
+  margin-bottom: 25px;
+}
+
+.suptitle {
+  line-height: $lh-sup + px;
+  margin-bottom: 50px;
+  color: $c-main-80;
+}
+
+.btn__shop,
+.fitting__room {
+  border: 1px solid $c-black;
+  display: inline-block;
+  text-align: center;
+  max-width: 165px;
+  max-height: 55px;
+  padding: 15px 0;
+  height: 100%;
+  width: 100%;
+
+  &:hover {
+    background-color: $c-black;
+  }
+}
+
+.btn__shop {
+  background-color: $c-black;
+  margin-right: 15px;
+  color: $c-white;
+}
