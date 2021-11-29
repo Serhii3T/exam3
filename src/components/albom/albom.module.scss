@@ -1,0 +1,102 @@
+@import '../../index.scss';
+
+.wrapper {
+  color: $c-white;
+}
+
+.containers {
+  display: flex;
+
+  @include media ('<desktop') {
+    flex-direction: column;
+  }
+}
+
+.bra,
+.bodyy,
+.nightwear {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $c-bg1;
+  background-size: cover;
+  align-items: center;
+  min-height: 720px;
+  display: flex;
+
+  @include media ('<phone') {
+    background-size: cover;
+    min-height: 280px;
+    height: auto;
+    width: 100%;
+  }
+
+  & h2 {
+    margin-bottom: 100px;
+    text-align: center;
+    max-width: 300px;
+
+    @include media ('<phone') {
+      font-size: $fs-h2-sm + px;
+      line-height: $lh-h3 + px;
+    }
+  }
+
+  & .text{
+    flex-direction: column;
+    align-items: center;
+    margin: auto auto;
+    display: flex;
+
+    @include media ('<phone') {
+      margin: 100px auto 0;
+    }
+  }
+}
+
+.bra,
+.bodyy {
+  width: 50%;
+
+  @include media ('<desktop') {
+    width: 100%;
+  }
+
+  @include media ('<phone') {
+    min-height: 400px;
+  }
+}
+
+.bra {
+  background-image: url(../../assets/images/albom1.png);
+}
+
+.bodyy {
+  background-image: url(../../assets/images/albom2.png);
+}
+
+.nightwear {
+  background-image: url(../../assets/images/albom3.png);
+  background-color: #C6C0BD;
+  
+  @include media ('<desktop') {
+    background-position-x: 85%;
+    background-size: cover;
+    height: max-content;
+    min-height: 400px;
+  }
+  
+  @include media ('<phone') {
+    background-image: url(../../assets/images/albom3.jpg);
+    margin: auto auto;
+  }
+
+
+  & .text{
+    margin: auto 0 auto 265px;
+
+    @include media ('<desktop') {
+      margin: auto auto;
+    }
+  }
+
+}

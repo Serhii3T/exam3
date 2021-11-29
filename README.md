@@ -13,3 +13,11 @@ npm i axios --save                             // support, receiving responses f
 npm i react-router
 npm i sass watch
 npm i swiper                                   // swiper
+
+<!-- font awesome -->
+npm i --save @fortawesome/fontawesome-svg-core
+npm install --save @fortawesome/free-solid-svg-icons
+npm install --save @fortawesome/react-fontawesome
+npm install --save @fortawesome/free-brands-svg-icons
+npm install --save @fortawesome/free-regular-svg-icons
+npm i --save @fortawesome/react-fontawesome@latest

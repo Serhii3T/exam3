@@ -35,7 +35,7 @@
   $c-main-30: #E5E5E5;
   $c-main-20: #F2F2F2; //
   $c-main-10: #FCFCFC;
-  $c-gold-100: #9E9789;
+  $c-gold-100: #9E9789; //
   $c-gold-90: #A8A295;
   $c-gold-80: #B2ACA0;
   $c-gold-70: #BCB7AD;
@@ -59,14 +59,26 @@
   // Font size
   $fs-display: 72;
   $fs-config: 12;
+  $fs-h2-sm: 22;
   $fs-base: 16;
   $fs-sm: 11;
+  $fs-h1: 48;
+  $fs-h2: 36;
+  $fs-h3: 26;
+
+
   
   // Line height
   $lh-config: 16;
   $lh-nav: 18;
   $lh-sup: 24;
+  $lh-h1: 56;
+  $lh-h2: 44;
+  $lh-h3: 32;
 
+  // Letter spacing
+  $ls-base: 0.08;
+  $ls-sm: 0.01;
 
   // Font weight
   $fw-5: 500;

@@ -5,26 +5,48 @@
   background-position: center 50%;
   background-repeat: no-repeat;
   background-color: $c-bg1;
-  background-size: cover;
+  background-size: contain;
   margin-top: 145px;
   min-height: 650px;
-  display: flex
+  display: flex;
+
+  @include media ('<desktop') {
+    background-image: none
+  }
 }
 
 .wrapper {
   @include containerGlobal;
   align-items: center;
   display: flex;
+  overflow: hidden;
+
+  @include media ('<desktop') {
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
 .info {
   max-width: 400px;
+  margin-bottom: 10px;
+
+  @include media ('<desktop') {
+    text-align: center;
+  }
 }
 
 .title {
   text-transform: uppercase;
   font-family: $f-Raleway;
-  margin-bottom: 25px;
+  margin: 25px 0 10px;
+
+  @include media ('<phone') {
+    line-height: $lh-h3 + px;
+    font-size: $fs-h3 + px;
+    display: inline-block;
+    max-width: 250px;
+  }
 }
 
 .suptitle {
@@ -47,10 +69,37 @@
   &:hover {
     background-color: $c-black;
   }
+
+  @include media ('<phone') {
+    font-size: $fs-sm + px;
+    font-weight: $fw-7;
+    max-width: 105px;
+    height: auto;
+  }
 }
 
 .btn__shop {
   background-color: $c-black;
   margin-right: 15px;
   color: $c-white;
+}
+
+.img {
+  background-image: url(../../assets/images/banner2.png);
+  background-position: -40% 50%;
+  background-repeat: no-repeat;
+  background-color: $c-bg1;
+  background-size: 95%;
+  min-height: 500px;
+  display: none;
+  // overflow: hidden;
+  
+  @include media ('<desktop') {
+    display: block;
+    min-width: 900px;
+  }
+
+  // @include media ('<phone') {
+  //   background-size: cover;
+  // }
 }

@@ -1,0 +1,196 @@
+@import '../../index.scss';
+
+.wrapper {
+  border-bottom: 1px solid $c-main-20;
+}
+
+.top {
+  justify-content: space-between;
+  @include containerGlobal;
+  margin: 40px auto;
+  flex-wrap: wrap;
+  display: flex;
+
+  @include media ('<phone') {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
+
+.logo {
+  max-height: 100px;
+  width: 80px;
+
+  & a {
+    display: inline-block;
+  }
+  
+  @include media ('<desktop') {
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  @include media ('<phone') {
+    margin: 0 auto 30px;
+  }
+}
+
+.main,
+.information,
+.company {
+  flex-direction: column;
+  display: flex;
+  
+  a {
+    font-family: $f-Gothic-A1;
+    margin-bottom: 10px;
+    color: $c-main-80;
+    
+    &:hover {
+      color: $c-turquoise;
+    }
+  }
+  
+  @include media ('<desktop') {
+    padding-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  @include media ('<phone') {
+    padding-right: 0;
+    text-align: center
+  }
+}
+
+.mailList {
+  max-width: 400px;
+
+  @include media ('<phone') {
+    max-width: 480px;
+  }
+}
+
+.heading {
+  letter-spacing: $ls-base + em;
+  line-height: $lh-nav+ px;
+  font-family: $f-Raleway;
+  margin-bottom: 15px;
+  color: $c-main-100;
+  font-weight: $fw-7;
+
+  @include media ('<phone') {
+    text-align: center
+  }
+}
+
+.form {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.input {
+  border: 1px solid $c-main-30;
+  padding: 10px 40px 10px 15px;
+  outline: none;
+  height: 55px;
+  width: 100%;
+
+  &::placeholder {
+    color: $c-main-60;
+  }
+}
+
+.send_btn {
+  background: transparent;
+  position: absolute;
+  cursor: pointer;
+  border: none;
+  height: 25px;
+  bottom: 15px;
+  right: 15px;
+  width: 25px;
+
+  svg path {
+    stroke-width: 2px;
+    fill: $c-black;
+  }
+
+  &:hover svg path {
+    fill: $c-turquoise;
+  }
+}
+
+.document {
+  font-size: $fs-config + px;
+
+  & a {
+    color: $c-gold-100;
+
+    &:hover {
+      color: $c-turquoise;
+    }
+  }
+
+  @include media ('<phone') {
+    text-align: center
+  }
+}
+
+.bottom {
+  justify-content: space-between;
+  @include containerGlobal;
+  margin: 25px auto;
+  display: flex;
+
+  @include media ('<phone') {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.info {
+  justify-content: space-between;
+  font-size: $fs-config + px;
+  max-width: 400px;
+  display: flex;
+  width: 100%;
+
+  @include media ('<phone') {
+    flex-direction: column;
+    justify-content: center;
+    max-width: 480px;
+  }
+}
+
+.privat {
+  font-size: $fs-config+ px;
+  align-items: center;
+  color: $c-main-60;
+  display: flex;
+
+  @include media ('<phone') {
+    margin: 0 auto 15px;
+  }
+}
+
+.terms {  
+  padding-right: 15px;
+}
+
+.icon {
+  height: 100%;
+  width: 90px;
+
+  @include media ('<phone') {
+    margin: 0 auto;
+  }
+}
+
+.social {
+  font-size: 20px;
+}
+
+.social .link {
+  display: inline-block;
+  padding: 0 10px;
+}
