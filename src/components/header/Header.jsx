@@ -50,7 +50,7 @@ function Header() {
 
           {/* logo */}
           <div className={styles.logo}>
-            <Link className={styles.link} to='/home'>
+            <Link className={styles.link} to='/main'>
               <LogoComponent />
             </Link>
           </div>

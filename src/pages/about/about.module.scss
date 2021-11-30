@@ -1,0 +1,88 @@
+@import "../../index.scss";
+
+// .wrapper {
+// }
+
+.topic {
+  @include containerGlobal;
+  margin: 150px auto 100px auto;
+  text-align: center;
+}
+
+.title {
+  text-transform: uppercase;
+  line-height: $lh-big + px;
+  font-size: $fs-big + px;
+  margin-bottom: 70px;
+}
+
+.text,
+.img1,
+.img2,
+.img3 {
+  min-height: 720px;
+  overflow: hidden;
+  width: 50%;
+  
+  @include media ('<desktop') {
+    width: 100%;
+  }
+}
+
+.img1,
+.img2,
+.img3 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $c-bg1;
+  background-size: cover;
+}
+
+.text {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 65px 35px;
+  display: flex;
+}
+
+.heading,
+.supheading {
+  max-width: 375px;
+}
+
+.heading {
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.box1,
+.box2,
+.box3 {
+  display: flex;
+
+  @include media ('<desktop') {
+    flex-direction: column;
+  }
+}
+
+.box1,
+.box3 {
+  @include media ('<desktop') {
+    flex-direction: column-reverse;
+  }
+}
+
+.img1 {
+  background-image: url(../../assets/images/about1.png);
+}
+
+.img2 {
+  background-image: url(../../assets/images/about2.png);
+}
+
+.img3 {
+  background-image: url(../../assets/images/about3.png);
+  background-size: 130%;
+}

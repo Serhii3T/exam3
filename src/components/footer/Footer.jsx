@@ -5,8 +5,15 @@ import classNames from "classnames";
 import LogoElement from "../../elements/logo2/Logo2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+
 // font awesome
-export const Beverage = () => (
+export const Beverage = () => {
+  let socialLink = {
+    facebook: 'https://www.facebook.com/serega.tritenko',
+    instagram: 'https://www.instagram.com/seregatritenko',
+  };
+
+  return (
   <div
     className={classNames(
       `${styles.social}`,
@@ -14,14 +21,15 @@ export const Beverage = () => (
       "justify-content-between"
     )}
   >
-    <Link className={styles.link} to="/www.facebook.com/serega.tritenko">
+    <a className={styles.link} href={socialLink.facebook} exact>
       <FontAwesomeIcon className={styles.social} icon={["fab", "facebook-f"]} />
-    </Link>
-    <Link className={styles.link} to="/https://www.instagram.com/seregatritenko/">
+    </a>
+    <a className={styles.link} href={socialLink.instagram} exact>
       <FontAwesomeIcon className={styles.social} icon={["fab", "instagram"]} />
-    </Link>
+    </a>
   </div>
-);
+)};
+// export default Beverage;
 
 function Footer() {
   return (
@@ -32,7 +40,7 @@ function Footer() {
         <div className={styles.top}>
           {/* logo */}
           <div className={styles.logo}>
-            <Link to="/">
+            <Link to="/main">
               <LogoElement />
             </Link>
           </div>
@@ -103,11 +111,11 @@ function Footer() {
             <p className={styles.document}>
               By signing up you agree with our{" "}
               <u>
-                <Link to="/">Terms & Conditions</Link>
+                <Link to="/service">Terms & Conditions</Link>
               </u>{" "}
               and{" "}
               <u>
-                <Link to="/">Privacy Policy</Link>
+                <Link to="/protection">Privacy Policy</Link>
               </u>
               . To opt out, click Unsubscribe in our emails.
             </p>

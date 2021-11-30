@@ -4,7 +4,7 @@ function NavItem() {
   return (
     <>
       <li className={styles.link}>
-        <Link to="/news-arrivals">NEW ARRIVALS</Link>
+        <Link to="/main">MAIN</Link>
       </li>
       <li className={styles.link}>
         <Link to="/plus-size">PLUS SIZE</Link>
@@ -19,7 +19,7 @@ function NavItem() {
         <Link to="/gifts">GIFTS</Link>
       </li>
       <li className={styles.link}>
-        <Link to="/collections">COLLECTIONS</Link>
+        <Link to="/service">SERVICE</Link>
       </li>
     </>
   );
