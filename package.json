@@ -53,5 +53,9 @@
   },
   "devDependencies": {
     "node-sass": "^5.0.0"
-  }
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.triggerExpansionOnTab": true
 }

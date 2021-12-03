@@ -16,7 +16,7 @@ function NavItem() {
         <Link to="/nightwear">NIGHTWEAR</Link>
       </li>
       <li className={styles.link}>
-        <Link to="/gifts">GIFTS</Link>
+        <Link to="/about">ABOUT</Link>
       </li>
       <li className={styles.link}>
         <Link to="/service">SERVICE</Link>

@@ -1,8 +1,5 @@
 @import "../../index.scss";
 
-// .wrapper {
-// }
-
 .topic {
   @include containerGlobal;
   margin: 150px auto 100px auto;
@@ -14,6 +11,10 @@
   line-height: $lh-big + px;
   font-size: $fs-big + px;
   margin-bottom: 70px;
+
+  @include media ('<tablet') {
+    font-size: $fs-h1-s + px;
+  }
 }
 
 .text,
@@ -21,11 +22,18 @@
 .img2,
 .img3 {
   min-height: 720px;
-  overflow: hidden;
   width: 50%;
   
   @include media ('<desktop') {
     width: 100%;
+  }
+
+  @include media ('<tablet') {
+    min-height: 540px;
+  }
+
+  @include media ('<phone') {
+    min-height: 360px;
   }
 }
 
@@ -55,6 +63,17 @@
 .heading {
   text-transform: uppercase;
   margin-bottom: 50px;
+
+  @include media ('<phone') {
+    font-size: $fs-h2-sm + px;
+    margin-bottom: 25px;
+  }
+}
+
+.supheading {
+  @include media ('<phone') {
+    font-size: $fs-phone + px;
+  }
 }
 
 .box1,
@@ -84,5 +103,60 @@
 
 .img3 {
   background-image: url(../../assets/images/about3.png);
-  background-size: 130%;
+}
+
+.article {
+  @include containerGlobal;
+  text-align: center;
+  margin: 50px auto;
+  max-width: 760px;
+}
+
+.description {
+  line-height: $lh-h1-xl + px;
+  text-transform: uppercase;
+  font-size: $fs-h1 + px;
+
+  @include media ('<phone') {
+    font-size: $fs-h2-sm + px;
+    line-height: $lh-h3 + px;
+  }
+}
+
+.photo {
+  margin: 0 auto 50px;
+  max-width: 670px;
+  height: 100%;
+}
+
+.tale {
+  justify-content: space-between;
+  @include containerGlobal;
+  max-width: 670px;
+  display: flex;
+
+  @include media ('<650px') {
+    flex-direction: column;
+  }
+
+  & div {
+    max-width: 300px;
+
+    @include media ('<650px') {
+      max-width: none;
+      width: 100%;
+    }
+  }
+
+  & p {
+    font-family: $f-Gothic-A1;
+    margin-bottom: 20px;
+  }
+}
+
+.sign {
+  transform: skewX(-10deg);
+  margin: 0 auto 50px;
+  max-width: 550px;
+  height: 100%;
 }

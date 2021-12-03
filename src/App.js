@@ -17,6 +17,7 @@ import Main from "./pages/main/Main";
 import Service from "./pages/service/Service";
 import Footer from "./components/footer/Footer";
 import Protection from "./pages/protection/Protection";
+import About from "./pages/about/About";
 
 // Fontawesome
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -29,11 +30,13 @@ function App() {
     <Router>
       <Header />
       <Routes>
-      
+        <Route path="/" exact element={<Main/>} />
+
         <Route path="/main" exact element={<Main/>} />
+        
+        <Route path="/about" element={<About/>} />
 
         <Route path="/service" element={<Service/>} />
-
         <Route path="/protection" element={<Protection/>} />
 
       </Routes>
