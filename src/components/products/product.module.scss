@@ -1,0 +1,107 @@
+@import '../../index.scss';
+
+.wrapper {
+  margin: 20px 10px;
+  max-width: 378px;
+  // animation: $a-base;
+}
+
+.picture {
+  transition: .35s all;
+  margin-bottom: 25px;
+  position: relative;
+  max-height: 500px;
+  overflow: hidden;
+
+  &:hover .img {
+    display: none;
+  }
+
+  &:hover .img_bg {
+    display: block;
+  }
+
+  &:hover .buy {
+    animation: opacity-reverse 0.35s linear forwards;
+  }
+}
+
+.img_bg {
+  display: none;
+}
+
+.buy {
+  background-color: $c-black;
+  position: absolute;
+  color: $c-white;
+  outline: none;
+  border: none;
+  padding: 5px;
+  width: 100%;
+  opacity: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.article,
+.like {
+  position: absolute;
+  top: 25px;
+}
+
+.article {
+  background-color: $c-white;
+  font-size: $fs-config + px;
+  justify-content: center;
+  align-items: center;
+  font-weight: $fw-7;
+  display: flex;
+  height: 40px;
+  width: 70px;
+  left: 0;
+}
+
+.like {
+  border: 1px solid $c-main-10;
+  background-color: $c-white;
+  border-radius: 50%;
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  right: 25px;
+
+  & svg {
+    display: block;
+  }
+
+  & svg path{
+    fill: $c-black;
+  }
+
+  &:hover svg {
+    fill: $c-erorr;
+  }
+
+  &:hover svg path {
+    fill: $c-erorr;
+  }
+
+  &:hover {
+    background-color: $c-black;
+    border: 1px solid $c-black;
+  }
+}
+
+.name {
+  font-size: $fs-h2-sm + px;
+
+  @include media ('<phone'){
+    font-size: $fs-phone + px;
+  }
+}
+
+.price {
+  font-weight: $fw-7;
+  color: $c-main-80;
+}

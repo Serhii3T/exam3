@@ -1,0 +1,17 @@
+@import '../../index.scss';
+
+.wrapper {
+  @include containerGlobal;
+  margin: 50px auto;
+}
+
+.title {
+  line-height: $lh-h1 + px;
+  font-family: $f-Raleway;
+  margin-bottom: 40px;
+}
+
+.container {
+  flex-wrap: wrap;
+  display: flex;
+}
