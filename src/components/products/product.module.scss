@@ -1,6 +1,7 @@
 @import '../../index.scss';
 
 .wrapper {
+  box-shadow: 0px 0px 20px -10px $c-black;
   margin: 20px 10px;
   max-width: 378px;
   // animation: $a-base;
@@ -21,7 +22,7 @@
     display: block;
   }
 
-  &:hover .buy {
+  &:hover .view {
     animation: opacity-reverse 0.35s linear forwards;
   }
 }
@@ -30,7 +31,7 @@
   display: none;
 }
 
-.buy {
+.view {
   background-color: $c-black;
   position: absolute;
   color: $c-white;
@@ -104,4 +105,9 @@
 .price {
   font-weight: $fw-7;
   color: $c-main-80;
+}
+
+.price,
+.name {
+  padding: 0 10px;
 }

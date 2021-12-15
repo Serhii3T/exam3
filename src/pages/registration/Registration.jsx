@@ -1,49 +1,34 @@
-import React, {useState, useContext} from "react";
-import { Link } from "react-router-dom";
-import { AuthContext } from "../../context/AuthContext";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+// to work with requests 
 import axios from "axios";
 
+// img logo
 import Logo2 from "../../elements/logo2/Logo2";
 
-import styles from "./autorization.module.scss";
+// module style
+import styles from "../autorization/autorization.module.scss";
 
-export default function Autorization() {
+
+export default function Registration() {
   // create state for form
   const [form, setForm] = useState({
     email: "",
     password: "",
   });
 
-  const { login } = useContext(AuthContext);
-
   // function for inputs
   const changeHandler = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value });
   };
-  // console.log(form);
-
-  // const authHandler = async () => {
-  //   try {
-  //     await axios.post(
-  //         "/api/auth/authentication",
-  //         { ...form },
-  //         {
-  //           headers: {
-  //             "Content-type": "application/json",
-  //           },
-  //         }
-  //       )
-  //       .then(response => console.log(response));
-  //   } catch (e) {
-  //     console.log(e);
-  //   }
-  // };
-
-  const loginHandler = async () => {
+  const navigate = useNavigate();
+  // function for dispatch(request)
+  const registerHandler = async () => {
+   
     try {
       await axios
         .post(
-          "/api/auth/login",
+          "/api/auth/registration",
           { ...form },
           {
             headers: {
@@ -51,9 +36,8 @@ export default function Autorization() {
             },
           }
         )
-        .then(response => {
-          console.log(response);
-          login(response.data.token, response.data.userId, response.data.email);
+        .then((response) => {
+          navigate("/autorization");
         });
     } catch (error) {
       console.log(error);
@@ -62,8 +46,10 @@ export default function Autorization() {
 
   return (
     <React.Fragment>
+
       {/* wrapper */}
       <div className={styles.wrapper}>
+
         {/* logo */}
         <div className={styles.logo}>
           <Logo2 />
@@ -71,11 +57,12 @@ export default function Autorization() {
 
         {/* title */}
         <div className={styles.title}>
-          Members <b>please</b> Sign In
+          Be a part of <b>Almerna’s</b> Club Members
         </div>
 
         {/* form */}
         <form className={styles.formSign} onSubmit={(e) => e.preventDefault()}>
+
           {/* input e-mail */}
           <input
             type="email"
@@ -85,7 +72,7 @@ export default function Autorization() {
             onChange={changeHandler}
           />
 
-          {/* input-password */}
+          {/* input-password */}  
           <input
             type="password"
             name="password"
@@ -94,22 +81,21 @@ export default function Autorization() {
             onChange={changeHandler}
           />
 
-          {/* btn submit form */}
+          {/* btn registration form */}
           <button
             type="submit"
-            onClick={loginHandler}
+            onClick={registerHandler}
             className={styles.btnSubmit}
           >
-            Sign in
+            Register
           </button>
 
-          {/* btn for registration */}
-          <Link to="/registration" className={styles.btnRegistration}>
-            Don't have account?
-          </Link>
-          
+          {/* btn for sign */}
+          <Link to="/autorization" className={styles.btnRegistration}>Already have account?</Link>
+
         </form>
         {/* end of form block */}
+
       </div>
       {/* end of wrapper block */}
     </React.Fragment>

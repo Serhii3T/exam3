@@ -8,22 +8,22 @@ function Product(props) {
       {/* Photo and info product */}
       <div className={styles.picture}>
 
-        {/* img */}
+        {/* img front*/}
         <img
           className={styles.img}
           src={props.photo}
           alt="girl"
         ></img>
 
-        {/* img background */}
+        {/* img back(hover) */}
         <img
           className={styles.img_bg}
           src={props.photo_bg}
           alt="girl"
         ></img>
 
-        {/* btn buy */}
-        <button className={styles.buy}> View more details! </button>
+        {/* btn view */}
+        <button className={styles.view}> View more details! </button>
 
         {/* article */}
         <div className={styles.article} style={props.article_display}>{props.article}</div>

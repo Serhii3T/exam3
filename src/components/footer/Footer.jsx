@@ -21,10 +21,10 @@ export const Beverage = () => {
       "justify-content-between"
     )}
   >
-    <a className={styles.link} href={socialLink.facebook} exact>
+    <a className={styles.link} href={socialLink.facebook}>
       <FontAwesomeIcon className={styles.social} icon={["fab", "facebook-f"]} />
     </a>
-    <a className={styles.link} href={socialLink.instagram} exact>
+    <a className={styles.link} href={socialLink.instagram}>
       <FontAwesomeIcon className={styles.social} icon={["fab", "instagram"]} />
     </a>
   </div>
@@ -99,8 +99,8 @@ function Footer() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893C6.90237 0.683418 6.90237 1.31658 7.29289 1.70711L12.5858 7H1C0.447715 7 0 7.44772 0 8C0 8.55229 0.447715 9 1 9H12.5858L7.29289 14.2929C6.90237 14.6834 6.90237 15.3166 7.29289 15.7071C7.68342 16.0976 8.31658 16.0976 8.70711 15.7071L15.7071 8.70711C16.0976 8.31658 16.0976 7.68342 15.7071 7.29289L8.70711 0.292893Z"
                     fill="none"
                   />
@@ -130,6 +130,8 @@ function Footer() {
 
       {/* footer bottom */}
       <div className={styles.bottom}>
+
+        {/* copyright */}
         <p className={styles.privat}>&#169;2021. Almerna</p>
 
         {/* regulations & social */}

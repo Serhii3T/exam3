@@ -2,23 +2,44 @@ create-react-app exam3
 cd exam3
 npm i
 
+
 ## npm start 
 
 npm install react-bootstrap bootstrap@5.1.3    // bootstrap
-npm install css-module-class-lister
+npm install css-module-class-lister --save     // 
 npm install node-sass --save-dev               // sass
-npm i react-router-dom --save
+npm i react-router-dom --save                  // react - 
 npm install classnames --save                  // classes
+npm i react-router --save                      // react -
 npm install formik --save                      // form
+npm i sass watch --save                        // sass watch
+npm i swiper --save                            // swiper
 npm i axios --save                             // support, receiving responses from the server
-npm i react-router
-npm i sass watch
-npm i swiper                                   // swiper
 
-<!-- font awesome -->
+
+## Fontawesome 
+
 npm i --save @fortawesome/fontawesome-svg-core
 npm install --save @fortawesome/free-solid-svg-icons
 npm install --save @fortawesome/react-fontawesome
 npm install --save @fortawesome/free-brands-svg-icons
 npm install --save @fortawesome/free-regular-svg-icons
 npm i --save @fortawesome/react-fontawesome@latest
+
+
+## Mern (MongoDB, Express, React, Node)
+npm init -y
+npm i express --save             // for back-end
+npm i mongoose --save            // for working with mangodb
+npm i nodemon --save             // monitor server activity light mode
+npm i concurrently --save        // need for run start back and front
+npm i express-validator --save   // for validate form submit
+npm i bcryptjs --save            // hash password
+npm i jsonwebtoken --save        // for create webtoken 
+
+
+
+## MongoDB google.acc (Coder warlink)
+## Atlas (quickstart) - CoderFire / 21212121     Admin / Admin
+
+## npm run dev - start server and client(exam3)

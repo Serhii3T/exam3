@@ -3,6 +3,7 @@ import Albom from '../../components/albom/Albom';
 import Product from '../../components/products/Product';
 import OurProducts from '../../components/ourProducts/OurProducts';
 
+import styles from './main.module.scss';
 
 import item1 from '../../assets/images/prod32.jpg';
 import item11 from '../../assets/images/prod31.jpg';
@@ -11,11 +12,13 @@ import item21 from '../../assets/images/prod52.jpg';
 import item3 from '../../assets/images/prod71.jpg';
 import item31 from '../../assets/images/prod72.jpg';
 
+
+
 function Main() {
   return (
     <>
       <Banner />
-      <div style={{display: 'flex', flexWrap: 'wrap'}}>
+      <div style={{display: 'flex', flexWrap: 'wrap'}} className={styles.prod}>
         <Product 
           photo={item1}
           photo_bg={item11}
